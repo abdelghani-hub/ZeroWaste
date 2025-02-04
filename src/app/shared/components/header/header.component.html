@@ -1,0 +1,26 @@
+<header class="fixed top-0 w-full z-10 bg-green-800/80 backdrop-blur-sm py-4">
+  <div class="container mx-auto px-6 flex items-center justify-between">
+    <div>
+      <app-logo></app-logo>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+    <a routerLink="/home" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
+      Home
+    </a>
+    <a routerLink="/recycling-services" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
+      Recycling Services
+    </a>
+    <a routerLink="/contact" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
+      Contact
+    </a>
+  </nav>
+
+    <a routerLink="/profile" class="flex items-center gap-4" >
+      <img class="w-10 h-10 rounded-full" src="assets/images/home_image.webp" alt="User Avatar">
+      <div class="font-medium text-white">
+        <div>Jane Doe</div>
+        <div class="text-sm text-gray-400">jane.doe&#64;example.com</div>
+      </div>
+    </a>
+  </div>
+</header>
