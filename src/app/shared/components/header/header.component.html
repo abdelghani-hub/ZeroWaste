@@ -4,23 +4,59 @@
       <app-logo></app-logo>
     </div>
     <nav class="hidden md:flex space-x-8">
-    <a routerLink="/home" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
-      Home
-    </a>
-    <a routerLink="/recycling-services" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
-      Recycling Services
-    </a>
-    <a routerLink="/contact" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
-      Contact
-    </a>
-  </nav>
+      <a routerLink="/home" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
+        Home
+      </a>
+      <a routerLink="/recycling-services" routerLinkActive="text-green-400"
+         class="text-white hover:text-green-400 transition">
+        Recycling Services
+      </a>
+      <a routerLink="/contact" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
+        Contact
+      </a>
+    </nav>
+    <div class="relative profile-dropdown">
+      <button
+        (click)="toggleDropdown()"
+        class="flex items-center gap-4 focus:outline-none cursor-pointer"
+      >
+        <img
+          class="w-10 h-10 rounded-full"
+          src="assets/images/home_image.webp"
+          alt="User Avatar"
+        >
+        <div class="font-medium text-white">
+          <div class="text-left">Jane Doe</div>
+          <div class="text-sm text-gray-400">jane.doe&#64;example.com</div>
+        </div>
+      </button>
 
-    <a routerLink="/profile" class="flex items-center gap-4" >
-      <img class="w-10 h-10 rounded-full" src="assets/images/home_image.webp" alt="User Avatar">
-      <div class="font-medium text-white">
-        <div>Jane Doe</div>
-        <div class="text-sm text-gray-400">jane.doe&#64;example.com</div>
-      </div>
-    </a>
+      @if (isDropdownOpen) {
+        <div class="absolute right-0 mt-2 w-48 py-2 bg-white rounded-md shadow-lg">
+          <div class="px-4 py-3 text-sm text-gray-900">
+            <div>Bonnie Green</div>
+            <div class="font-medium truncate">name&#64;flowbite.com</div>
+          </div>
+          <ul class="py-2 text-sm text-gray-700 " aria-labelledby="avatarButton">
+            <li>
+              <a routerLink="/profile" class="block px-4 py-2 hover:bg-gray-100">
+                Profile
+              </a>
+            </li>
+          </ul>
+          <div class="py-1 w-full">
+            <button
+              type="button"
+              (click)="logout()"
+               class="flex gap-2 w-full px-4 py-2 text-sm text-gray-700 bg-gray-50 hover:bg-gray-100 cursor-pointer">
+              <svg class="rotate-180 w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+              </svg>
+              Sign out
+            </button>
+          </div>
+        </div>
+      }
+    </div>
   </div>
 </header>
