@@ -43,6 +43,192 @@
       "phone": "0687762612",
       "birthDate": "2000-02-01",
       "role": "participant"
+    },
+    {
+      "id": "160cc5bb-39d0-4bbc-95a2-1ef31c0592a6",
+      "email": "neboxijun@mailinator.com",
+      "passwordHash": "b2fe8b46929bfa4c65fee9d5d43a2423799b18e360782e9abc27bd420877243e",
+      "firstName": "Brielle",
+      "lastName": "Chen",
+      "address": "Velit id temporibus",
+      "phone": "0878783878",
+      "birthDate": "2001-01-15",
+      "role": "participant"
+    },
+    {
+      "id": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed",
+      "email": "talhanit@gmail.com",
+      "passwordHash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+      "firstName": "talhanit",
+      "lastName": "talhanit",
+      "address": "Eaque et ad qui cons",
+      "phone": "0789898989",
+      "birthDate": "1971-02-12",
+      "role": "participant"
+    }
+  ],
+  "collectRequests": [
+    {
+      "id": "866de244-a332-495e-976c-94ebd1ecefa1",
+      "types": [
+        {
+          "type": "glass",
+          "weight": 3000
+        }
+      ],
+      "address": "trezendl",
+      "scheduledDate": "2025-03-01T16:00:00.000Z",
+      "note": "",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 3000,
+      "createdAt": "2025-02-07T15:48:11.867Z",
+      "updatedAt": "2025-02-07T15:48:11.867Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "90bb56cc-e0c6-4ca9-8ece-3f56baef4259",
+      "types": [
+        {
+          "type": "null",
+          "weight": 7200
+        }
+      ],
+      "address": "Consequatur Optio ",
+      "scheduledDate": "2025-08-05T15:00:00.000Z",
+      "note": "Vel duis Nam error d",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 7200,
+      "createdAt": "2025-02-07T15:57:24.252Z",
+      "updatedAt": "2025-02-07T15:57:24.252Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "94ecc532-c8d0-4228-8abe-8e06656100c8",
+      "types": [
+        {
+          "type": "plastic",
+          "weight": 2400
+        }
+      ],
+      "address": "Aliqua Voluptatibus",
+      "scheduledDate": "2025-07-23T14:00:00.000Z",
+      "note": "At beatae deserunt p",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 2400,
+      "createdAt": "2025-02-07T16:12:42.476Z",
+      "updatedAt": "2025-02-07T16:12:42.476Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "03c9a916-ab54-4dfc-9867-760a1fff43ac",
+      "types": [
+        {
+          "type": "null",
+          "weight": 7500
+        }
+      ],
+      "address": "Minim nulla voluptat",
+      "scheduledDate": "2025-02-21T12:00:00.000Z",
+      "note": "Et modi rerum sit ex",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 7500,
+      "createdAt": "2025-02-08T15:19:32.673Z",
+      "updatedAt": "2025-02-08T15:19:32.673Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "10d189d9-4d51-4003-b98b-344823879cdc",
+      "types": [
+        {
+          "type": "null",
+          "weight": 5900
+        }
+      ],
+      "address": "Eaque enim commodi e",
+      "scheduledDate": "2025-02-21T15:00:00.000Z",
+      "note": "Et officia sit sunt",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 5900,
+      "createdAt": "2025-02-08T15:26:09.352Z",
+      "updatedAt": "2025-02-08T15:26:09.352Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "959917ca-d975-415d-9b5a-32ecb8b96a52",
+      "types": [
+        {
+          "type": "paper",
+          "weight": 8900
+        }
+      ],
+      "address": "Voluptatem mollitia ",
+      "scheduledDate": "2025-04-24T11:00:00.000Z",
+      "note": "Rerum inventore ipsa",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 8900,
+      "createdAt": "2025-02-08T15:32:25.228Z",
+      "updatedAt": "2025-02-08T15:32:25.228Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "9b86abf1-5c02-4608-bc64-501419f7c4ef",
+      "types": [
+        {
+          "type": "plastic",
+          "weight": 4600
+        }
+      ],
+      "address": "Nemo quo animi dist",
+      "scheduledDate": "2025-02-17T10:00:00.000Z",
+      "note": "Natus est eos aut ",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 4600,
+      "createdAt": "2025-02-08T15:37:01.704Z",
+      "updatedAt": "2025-02-08T15:37:01.704Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "e7c2a6ac-0380-4af7-b944-5cd0ca4b6dac",
+      "types": [
+        {
+          "type": "null",
+          "weight": 4900
+        }
+      ],
+      "address": "In aliqua Inventore",
+      "scheduledDate": "2025-10-27T12:00:00.000Z",
+      "note": "Architecto laborum i",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 4900,
+      "createdAt": "2025-02-08T15:53:29.483Z",
+      "updatedAt": "2025-02-08T15:53:29.483Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "88394c22-c81b-46bb-82a1-e282934aa01f",
+      "types": [
+        {
+          "type": "paper",
+          "weight": 7800
+        }
+      ],
+      "address": "Dolores rem voluptat",
+      "scheduledDate": "2025-02-09T16:00:00.000Z",
+      "note": "Sunt quae cupidatat",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 7800,
+      "createdAt": "2025-02-08T16:01:20.055Z",
+      "updatedAt": "2025-02-08T16:01:20.055Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     }
   ]
 }

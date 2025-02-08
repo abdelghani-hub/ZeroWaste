@@ -3,6 +3,7 @@ import {LandingComponent} from "./shared/components/landing-page/landing-page.co
 import {ProfileComponent} from "./features/settings/profile/profile.component";
 import {roleGuard} from "./core/guards/role.guard";
 import {authGuard} from "./core/guards/auth.guard";
+import {HomeComponent} from "./features/home/home.component";
 
 export const routes: Routes = [
   {
@@ -11,8 +12,12 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'profile',
+        redirectTo: 'home',
         pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
       },
       {
         path: 'profile',
