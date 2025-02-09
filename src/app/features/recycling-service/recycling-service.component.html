@@ -1,0 +1,111 @@
+<section class="bg-gray-50 dark:bg-gray-900 pt-20 relative min-h-screen bg-center">
+  <div class="px-4 mx-auto max-w-screen-2xl lg:px-12">
+
+    <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+      <div
+        class="flex flex-col px-4 py-3 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4">
+        <div class="flex items-center flex-1 space-x-4">
+          <h5>
+            <span class="text-gray-500 flex gap-1">
+              <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                   width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                      d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+                      clip-rule="evenodd"/>
+              </svg>
+              Collector City
+            </span>
+          </h5>
+        </div>
+        <div
+          class="flex flex-col flex-shrink-0 space-y-3 md:flex-row md:items-center lg:justify-end md:space-y-0 md:space-x-3">
+          <button type="button"
+                  class="cursor-pointer flex items-center justify-center flex-shrink-0 px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+                 stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+            </svg>
+            Export
+          </button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 max-h-screen overflow-y-scroll">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th scope="col" class="px-4 py-3">Participant</th>
+            <th scope="col" class="px-4 py-3">Schedule Date</th>
+            <th scope="col" class="px-4 py-3">Types</th>
+            <th scope="col" class="px-4 py-3">Total Weight</th>
+            <th scope="col" class="px-4 py-3">Address</th>
+            <th scope="col" class="px-4 py-3">Last Update</th>
+            <th scope="col" class="px-4 py-3">Status</th>
+          </tr>
+          </thead>
+          <tbody *ngIf="collectorRequests.length > 0">
+          <tr *ngFor="let request of collectorRequests"
+              class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+            <th scope="row"
+                class="flex items-center px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              <div class="inline-flex items-center gap-x-3">
+                <div class="flex items-center gap-x-2">
+                  <span class="object-cover w-10 h-10 rounded-full flex items-center justify-center bg-gray-500">
+                      {{ randomAvatar() }}
+                      <!-- todo: requester avatar -->
+                  </span>
+                  <div>
+                    <p
+                      class="font-medium text-gray-800 dark:text-white ">
+                      Participant Name
+                      <!-- todo: requester name -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <td class="px-4 py-2">
+              <span
+                class="bg-primary-100 text-primary-800 font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                {{ request.scheduledDate | date: 'dd MMM yyyy' }}
+              </span>
+            </td>
+            <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white max-w-52">
+              <div class="flex flex-wrap items-center">
+                <span
+                  *ngFor="let type of request.types"
+                  class="bg-gray-100 text-gray-800 font-medium px-2 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 inline-block mr-1 mb-0.5">
+                  {{ type.type }}
+                </span>
+              </div>
+            </td>
+            <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {{ request.totalWeight }} g
+            </td>
+            <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              <p class="text-gray-500 dark:text-gray-400">
+                {{ request.address }}
+              </p>
+            </td>
+            <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              <p class="text-gray-500 dark:text-gray-400">
+                {{ request.updatedAt | dateAgo }}
+              </p>
+            </td>
+            <td>
+              <app-status-select
+                [currentStatus]="request.status.toString()"
+                (statusChange)="onStatusChange($event, request.id)"
+              ></app-status-select>
+            </td>
+          </tr>
+          </tbody>
+          <div *ngIf="collectorRequests.length === 0"
+               class="flex items-center justify-center p-4">
+            <p class="text-gray-500 dark:text-gray-400 text-center">No data available</p>
+          </div>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

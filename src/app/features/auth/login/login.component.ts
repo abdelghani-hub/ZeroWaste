@@ -34,7 +34,8 @@ export class LoginComponent {
       try {
         const success = await this.authService.login(credentials);
         if (success) {
-          this.router.navigate(['/profile'])
+          let routeTo = this.authService.getCurrentUser?.role === "collector" ? '/recycling-service' : '/profile';
+          this.router.navigate([routeTo])
             .then(r => r);
         }
       } catch (error) {
