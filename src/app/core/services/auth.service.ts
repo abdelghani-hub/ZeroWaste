@@ -28,6 +28,9 @@ export interface AuthenticatedUser {
   lastName: string;
   email: string;
   role?: 'participant' | 'collector';
+  phone?: string;
+  address?: string;
+
 }
 
 @Injectable({
@@ -74,7 +77,9 @@ export class AuthService {
           firstName: user.firstName,
           lastName: user.lastName,
           email: user.email,
-          role: user.role
+          role: user.role,
+          phone: user.phone,
+          address: user.address
         };
 
         localStorage.setItem(this.localStorageKey, JSON.stringify(authenticatedUser));

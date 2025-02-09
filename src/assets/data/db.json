@@ -229,6 +229,24 @@
       "createdAt": "2025-02-08T16:01:20.055Z",
       "updatedAt": "2025-02-08T16:01:20.055Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "dc37956b-8060-43bf-8d0d-b931073577e0",
+      "types": [
+        {
+          "type": "glass",
+          "weight": 4000
+        }
+      ],
+      "address": "youssoufia",
+      "scheduledDate": "2025-03-01T10:00:00.000Z",
+      "note": "",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 4000,
+      "createdAt": "2025-02-09T11:57:48.693Z",
+      "updatedAt": "2025-02-09T11:57:48.693Z",
+      "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     }
   ]
 }

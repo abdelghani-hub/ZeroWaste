@@ -18,7 +18,7 @@ export const createRequestFailure = createAction(
 
 export const loadUserRequests = createAction(
   '[Collect Request] Load User Requests',
-  props<{ userId: string }>()
+  props<{ userId: string | undefined }>()
 );
 
 export const loadUserRequestsSuccess = createAction(
