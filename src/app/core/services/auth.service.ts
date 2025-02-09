@@ -3,19 +3,8 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {hashPassword} from '../utils/hasher.util';
-
-// User model interface
-export interface User {
-  id: string;
-  email: string;
-  passwordHash: string;
-  firstName: string;
-  lastName: string;
-  address: string;
-  phone: string;
-  birthDate: Date;
-  role: 'participant' | 'collector';
-}
+import {User} from '../models/user.model';
+import {generateUUID} from "../utils/uuidGenerator.util";
 
 // Request interfaces
 export interface RegisterRequest {
@@ -39,6 +28,9 @@ export interface AuthenticatedUser {
   lastName: string;
   email: string;
   role?: 'participant' | 'collector';
+  phone?: string;
+  address?: string;
+
 }
 
 @Injectable({
@@ -73,7 +65,7 @@ export class AuthService {
       const users: User[] | undefined = await this.http.get<User[]>(`${this.apiUrl}?email=${credentials.email}`).toPromise();
 
       if (users?.length === 0) {
-        throw new Error('Invalid email or password');
+        return false;
       }
 
       const hashedPassword = await hashPassword(credentials.password);
@@ -85,14 +77,16 @@ export class AuthService {
           firstName: user.firstName,
           lastName: user.lastName,
           email: user.email,
-          role: user.role
+          role: user.role,
+          phone: user.phone,
+          address: user.address
         };
 
         localStorage.setItem(this.localStorageKey, JSON.stringify(authenticatedUser));
         this.userSubject.next(authenticatedUser);
         return true;
       } else {
-        throw new Error('Invalid email or password');
+        return false;
       }
     } catch (error) {
       throw error;
@@ -107,12 +101,12 @@ export class AuthService {
       const users: User[] | undefined = await this.http.get<User[]>(`${this.apiUrl}?email=${userData.email}`).toPromise();
 
       if (users && users.length > 0) {
-        throw new Error('Email already exists');
+        return false;
       }
 
       const hashedPassword = await hashPassword(userData.password);
       const newUser: User = {
-        id: this.generateUUID(),
+        id: generateUUID(),
         email: userData.email,
         passwordHash: hashedPassword,
         firstName: userData.firstName,
@@ -148,15 +142,6 @@ export class AuthService {
    */
   isAuthenticated(): boolean {
     return !!this.getCurrentUser;
-  }
-
-  /**
-   * Generate new unique UUID
-   */
-  generateUUID(): string {
-    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
-      (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
-    );
   }
 }
 

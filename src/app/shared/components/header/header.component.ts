@@ -1,9 +1,9 @@
 // header.component.ts
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from "@angular/router";
-import { LogoComponent } from "../logo/logo.component";
-import { AuthService } from "../../../core/services/auth.service";
-import { CommonModule } from '@angular/common';
+import {Component} from '@angular/core';
+import {RouterLink, RouterLinkActive} from "@angular/router";
+import {LogoComponent} from "../logo/logo.component";
+import {AuthService} from "../../../core/services/auth.service";
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -45,5 +45,10 @@ export class HeaderComponent {
   ngOnDestroy() {
     // Remove listener when component is destroyed
     document.removeEventListener('click', this.closeDropdown.bind(this));
+  }
+
+  // Toggle dark mode in your component
+  toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
   }
 }
