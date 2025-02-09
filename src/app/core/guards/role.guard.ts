@@ -9,7 +9,6 @@ export const roleGuard: CanActivateFn = (route, state): true | false => {
   const currentUserRole = authService.getCurrentUser?.role;
 
   if (!currentUserRole) {
-    console.error('No current user role found.');
     router.navigate(['/auth/login']).then(r => r);
     return false;
   }

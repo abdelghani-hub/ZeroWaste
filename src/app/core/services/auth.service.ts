@@ -117,8 +117,6 @@ export class AuthService {
         role: 'participant'
       };
 
-      console.log('New user:', newUser);
-
       await this.http.post<User>(this.apiUrl, newUser).toPromise();
       return true;
     } catch (error) {

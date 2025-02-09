@@ -4,6 +4,7 @@ import {ProfileComponent} from "./features/settings/profile/profile.component";
 import {roleGuard} from "./core/guards/role.guard";
 import {authGuard} from "./core/guards/auth.guard";
 import {HomeComponent} from "./features/home/home.component";
+import {RecyclingServiceComponent} from "./features/recycling-service/recycling-service.component";
 
 export const routes: Routes = [
   {
@@ -25,6 +26,14 @@ export const routes: Routes = [
         canActivate: [roleGuard],
         data: {
           roles: ['participant', 'collector']
+        }
+      },
+      {
+        path: 'recycling-service',
+        component: RecyclingServiceComponent,
+        canActivate: [roleGuard],
+        data: {
+          roles: ['collector']
         }
       }
     ]
