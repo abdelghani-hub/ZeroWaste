@@ -1,4 +1,4 @@
-<header class="fixed top-0 w-full z-10 bg-green-800/80 backdrop-blur-sm py-4">
+<header class="fixed top-0 w-full z-10 bg-green-800/80 backdrop-blur-sm">
   <div class="container mx-auto px-6 flex items-center justify-between">
     <div>
       <app-logo></app-logo>
@@ -7,9 +7,15 @@
       <a routerLink="/home" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
         Home
       </a>
-      <a routerLink="/recycling-service" routerLinkActive="text-green-400"
+      <a *ngIf="user?.role === 'collector'"
+        routerLink="/recycling-service" routerLinkActive="text-green-400"
          class="text-white hover:text-green-400 transition">
         Recycling Services
+      </a>
+      <a *ngIf="user?.role != 'collector'"
+        routerLink="/home" routerLinkActive="text-green-400"
+         class="text-white hover:text-green-400 transition">
+        Services
       </a>
       <a routerLink="/home" routerLinkActive="text-green-400" class="text-white hover:text-green-400 transition">
         Contact
@@ -25,17 +31,17 @@
           src="assets/images/home_image.webp"
           alt="User Avatar"
         >
-        <div class="font-medium text-white">
-          <div class="text-left">Jane Doe</div>
-          <div class="text-sm text-gray-400">jane.doe&#64;example.com</div>
+        <div class="font-medium text-white  hidden md:block">
+          <div class="text-left">{{ user?.firstName }} {{ user?.lastName }}</div>
+          <div class="text-sm text-gray-400">{{ user?.email }}</div>
         </div>
       </button>
 
       @if (isDropdownOpen) {
         <div class="absolute right-0 mt-2 w-48 py-2 bg-white rounded-md shadow-lg">
           <div class="px-4 py-3 text-sm text-gray-900">
-            <div>Bonnie Green</div>
-            <div class="font-medium truncate">name&#64;flowbite.com</div>
+            <div>{{ user?.firstName }} {{ user?.lastName }}</div>
+            <div class="font-medium truncate">{{ user?.email }}</div>
           </div>
           <ul class="py-2 text-sm text-gray-700 " aria-labelledby="avatarButton">
             <li>
