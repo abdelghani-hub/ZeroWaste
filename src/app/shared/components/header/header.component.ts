@@ -2,7 +2,7 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {LogoComponent} from "../logo/logo.component";
-import {AuthService} from "../../../core/services/auth.service";
+import {AuthenticatedUser, AuthService} from "../../../core/services/auth.service";
 import {CommonModule} from '@angular/common';
 
 @Component({
@@ -18,8 +18,11 @@ import {CommonModule} from '@angular/common';
 })
 export class HeaderComponent {
   isDropdownOpen = false;
+  public user : AuthenticatedUser | null;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {
+    this.user = this.authService.getCurrentUser;
+  }
 
   logout() {
     this.authService.logout();
