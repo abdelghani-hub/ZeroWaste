@@ -65,6 +65,28 @@
       "phone": "0789898989",
       "birthDate": "1971-02-12",
       "role": "participant"
+    },
+    {
+      "id": "64e94b76-4203-4080-9328-d8e84c4afafb",
+      "email": "collector@gmail.com",
+      "passwordHash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+      "firstName": "wastes",
+      "lastName": "collector",
+      "address": "Tinghir",
+      "phone": "0678910112",
+      "birthDate": "1990-02-12",
+      "role": "collector"
+    },
+    {
+      "id": "593a9cd2-3ae6-4e29-99c5-7ed3a58a02d7",
+      "email": "qucehyryke@mailinator.com",
+      "passwordHash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+      "firstName": "Abdelghani",
+      "lastName": "AIT TAMGHART",
+      "address": "Youssoufia",
+      "phone": "0687762667",
+      "birthDate": "1994-12-15",
+      "role": "participant"
     }
   ],
   "collectRequests": [
@@ -76,14 +98,14 @@
           "weight": 3000
         }
       ],
-      "address": "trezendl",
+      "address": "Tinghir",
       "scheduledDate": "2025-03-01T16:00:00.000Z",
       "note": "",
-      "status": "pending",
+      "status": "accepted",
       "photos": [],
       "totalWeight": 3000,
       "createdAt": "2025-02-07T15:48:11.867Z",
-      "updatedAt": "2025-02-07T15:48:11.867Z",
+      "updatedAt": "2025-02-09T19:27:32.672Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -94,14 +116,14 @@
           "weight": 7200
         }
       ],
-      "address": "Consequatur Optio ",
+      "address": "Tinghir",
       "scheduledDate": "2025-08-05T15:00:00.000Z",
       "note": "Vel duis Nam error d",
-      "status": "pending",
+      "status": "accepted",
       "photos": [],
       "totalWeight": 7200,
       "createdAt": "2025-02-07T15:57:24.252Z",
-      "updatedAt": "2025-02-07T15:57:24.252Z",
+      "updatedAt": "2025-02-09T19:27:30.239Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -112,14 +134,14 @@
           "weight": 2400
         }
       ],
-      "address": "Aliqua Voluptatibus",
+      "address": "Tinghir",
       "scheduledDate": "2025-07-23T14:00:00.000Z",
       "note": "At beatae deserunt p",
-      "status": "pending",
+      "status": "accepted",
       "photos": [],
       "totalWeight": 2400,
       "createdAt": "2025-02-07T16:12:42.476Z",
-      "updatedAt": "2025-02-07T16:12:42.476Z",
+      "updatedAt": "2025-02-09T19:28:50.032Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -130,14 +152,14 @@
           "weight": 7500
         }
       ],
-      "address": "Minim nulla voluptat",
+      "address": "Tinghir",
       "scheduledDate": "2025-02-21T12:00:00.000Z",
       "note": "Et modi rerum sit ex",
-      "status": "pending",
+      "status": "validated",
       "photos": [],
       "totalWeight": 7500,
       "createdAt": "2025-02-08T15:19:32.673Z",
-      "updatedAt": "2025-02-08T15:19:32.673Z",
+      "updatedAt": "2025-02-09T19:28:53.896Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -148,14 +170,14 @@
           "weight": 5900
         }
       ],
-      "address": "Eaque enim commodi e",
+      "address": "Tinghir",
       "scheduledDate": "2025-02-21T15:00:00.000Z",
       "note": "Et officia sit sunt",
-      "status": "pending",
+      "status": "rejected",
       "photos": [],
       "totalWeight": 5900,
       "createdAt": "2025-02-08T15:26:09.352Z",
-      "updatedAt": "2025-02-08T15:26:09.352Z",
+      "updatedAt": "2025-02-10T10:00:42.437Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -166,14 +188,14 @@
           "weight": 8900
         }
       ],
-      "address": "Voluptatem mollitia ",
+      "address": "Tinghir",
       "scheduledDate": "2025-04-24T11:00:00.000Z",
       "note": "Rerum inventore ipsa",
-      "status": "pending",
+      "status": "completed",
       "photos": [],
       "totalWeight": 8900,
       "createdAt": "2025-02-08T15:32:25.228Z",
-      "updatedAt": "2025-02-08T15:32:25.228Z",
+      "updatedAt": "2025-02-09T21:04:01.177Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -184,14 +206,14 @@
           "weight": 4600
         }
       ],
-      "address": "Nemo quo animi dist",
+      "address": "Tinghir",
       "scheduledDate": "2025-02-17T10:00:00.000Z",
       "note": "Natus est eos aut ",
-      "status": "pending",
+      "status": "completed",
       "photos": [],
       "totalWeight": 4600,
       "createdAt": "2025-02-08T15:37:01.704Z",
-      "updatedAt": "2025-02-08T15:37:01.704Z",
+      "updatedAt": "2025-02-10T10:01:10.143Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -202,14 +224,14 @@
           "weight": 4900
         }
       ],
-      "address": "In aliqua Inventore",
+      "address": "Tinghir",
       "scheduledDate": "2025-10-27T12:00:00.000Z",
       "note": "Architecto laborum i",
-      "status": "pending",
+      "status": "rejected",
       "photos": [],
       "totalWeight": 4900,
       "createdAt": "2025-02-08T15:53:29.483Z",
-      "updatedAt": "2025-02-08T15:53:29.483Z",
+      "updatedAt": "2025-02-09T21:03:37.102Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
     },
     {
@@ -220,7 +242,7 @@
           "weight": 7800
         }
       ],
-      "address": "Dolores rem voluptat",
+      "address": "Dolores rem Tinghir",
       "scheduledDate": "2025-02-09T16:00:00.000Z",
       "note": "Sunt quae cupidatat",
       "status": "pending",
@@ -236,17 +258,65 @@
         {
           "type": "glass",
           "weight": 4000
+        },
+        {
+          "type": "paper",
+          "weight": 2300
         }
       ],
-      "address": "youssoufia",
+      "address": "Tinghir",
       "scheduledDate": "2025-03-01T10:00:00.000Z",
       "note": "",
       "status": "pending",
       "photos": [],
       "totalWeight": 4000,
       "createdAt": "2025-02-09T11:57:48.693Z",
-      "updatedAt": "2025-02-09T11:57:48.693Z",
+      "updatedAt": "2025-02-09T18:42:40.141Z",
       "userId": "1ce33258-9c65-4166-bbe8-a3d4dbb928ed"
+    },
+    {
+      "id": "2688adc9-dea2-4566-b15a-b2c36e60385f",
+      "types": [
+        {
+          "type": "plastic",
+          "weight": 5000
+        },
+        {
+          "type": "paper",
+          "weight": 800
+        }
+      ],
+      "address": "Tinghir",
+      "scheduledDate": "2025-03-02T12:00:00.000Z",
+      "note": "NOTE",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 5800,
+      "createdAt": "2025-02-09T21:03:11.837Z",
+      "updatedAt": "2025-02-09T21:03:11.837Z",
+      "userId": "22f53a31-361f-4b3c-9e51-8926ace09d65"
+    },
+    {
+      "id": "8c2a19b9-db91-4d24-b1ec-24ee8a9747c5",
+      "types": [
+        {
+          "type": "plastic",
+          "weight": 3000
+        },
+        {
+          "type": "glass",
+          "weight": 4000
+        }
+      ],
+      "address": "Youssoufia",
+      "scheduledDate": "2025-03-01T13:00:00.000Z",
+      "note": "note",
+      "status": "pending",
+      "photos": [],
+      "totalWeight": 7000,
+      "createdAt": "2025-02-10T09:59:53.324Z",
+      "updatedAt": "2025-02-10T09:59:53.324Z",
+      "userId": "593a9cd2-3ae6-4e29-99c5-7ed3a58a02d7"
     }
   ]
 }

@@ -10,6 +10,7 @@ import {
 } from "@angular/forms";
 import {AuthService, RegisterRequest} from "../../../core/services/auth.service";
 import {Router, RouterLink} from "@angular/router";
+import {LogoComponent} from "../../../shared/components/logo/logo.component";
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,8 @@ import {Router, RouterLink} from "@angular/router";
     ReactiveFormsModule,
     NgIf,
     RouterLink,
-    NgClass
+    NgClass,
+    LogoComponent
   ],
   templateUrl: './register.component.html',
 })

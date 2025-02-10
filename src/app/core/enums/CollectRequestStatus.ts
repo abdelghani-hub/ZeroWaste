@@ -5,4 +5,5 @@ export default class CollectRequestStatus {
   public static readonly INPROGRESS = 'inprogress';
   public static readonly VALIDATED = 'validated';
   public static readonly REJECTED = 'rejected';
+  public static readonly COMPLETED = 'completed';
 }

@@ -3,6 +3,7 @@ import {NgIf} from "@angular/common";
 import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {AuthService, LoginRequest} from "../../../core/services/auth.service";
 import {Router, RouterLink} from "@angular/router";
+import {LogoComponent} from "../../../shared/components/logo/logo.component";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import {Router, RouterLink} from "@angular/router";
   imports: [
     ReactiveFormsModule,
     RouterLink,
-    NgIf
+    NgIf,
+    LogoComponent
   ],
   templateUrl: './login.component.html',
 })
@@ -34,7 +36,8 @@ export class LoginComponent {
       try {
         const success = await this.authService.login(credentials);
         if (success) {
-          this.router.navigate(['/profile'])
+          let routeTo = this.authService.getCurrentUser?.role === "collector" ? '/recycling-service' : '/profile';
+          this.router.navigate([routeTo])
             .then(r => r);
         }
       } catch (error) {

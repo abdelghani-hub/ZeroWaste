@@ -6,7 +6,7 @@ import {CollectRequest} from '../models/collectRequest.model';
 import CollectRequestStatus from "../enums/CollectRequestStatus";
 import {generateUUID} from "../utils/uuidGenerator.util";
 import {NotificationUtil} from "../utils/NotificationUtil";
-import {AuthService} from "./auth.service";
+import {AuthenticatedUser, AuthService} from "./auth.service";
 
 @Injectable({
   providedIn: 'root'
@@ -71,6 +71,13 @@ export class CollectRequestService {
 
   getUserRequests(userId: string | undefined): Observable<CollectRequest[]> {
     return this.http.get<CollectRequest[]>(`${this.apiUrl}?userId=${userId}`).pipe(
+      delay(500), // Simulate API delay
+      catchError(error => throwError(() => error))
+    );
+  }
+
+  getCollectorRequests(user: AuthenticatedUser): Observable<CollectRequest[]> {
+    return this.http.get<CollectRequest[]>(`${this.apiUrl}?address=${user.address}`).pipe(
       delay(500), // Simulate API delay
       catchError(error => throwError(() => error))
     );
